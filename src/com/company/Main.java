@@ -26,16 +26,16 @@ public class Main {
         for (int i = 0; i < data.length; i++) {
             System.out.println(i + ". " + data[i][0]);
         }
+        System.out.println("Введите индекс города из списка:");
 
         boolean whileTrue = true;
         while (whileTrue) {
 
-            System.out.println("Введите индекс города из списка:");
 
             int citi_Id = scanner.nextInt();
 
 
-            if (citi_Id < 0 || citi_Id > data.length && whileTrue) {
+            if (citi_Id < 0 || citi_Id >= data.length && whileTrue) {
                 System.out.println("Введите индекс города из списка:");
             } else if (citi_Id < data.length && citi_Id >= 0) {
                 whileTrue = false;
